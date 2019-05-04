@@ -82,9 +82,11 @@ h1 {
 	background-color: #c8c4be;
 	padding: 5px 10px;
 }
-.text:focus {
-	border: none;
+.text:focus,
+.search:focus {
 	outline: none;
+	border: 1px solid  var(--decoration-color);
+	background-color: #e8e1d7;
 }
 .search {
 	margin-left: 5px;
@@ -99,6 +101,9 @@ h1 {
 .description p span,
 .list {
 	font-weight: bold;
+}
+.list {
+	padding-left: 25px;
 }
 .items {
 	font-weight: normal;
