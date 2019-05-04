@@ -92,7 +92,7 @@ h1 {
 	width: calc(60px + 20px);
 }
 .description {
-	margin: 0 auto;
+	margin: 50px auto 10px;
 	font-size: 1em;
 	font-weight: normal;
 }
@@ -135,6 +135,11 @@ h1 {
 
 /*_____________*/
 @media (max-width: 768px) {
-	
+	.text-holder {
+		width: calc(95% - 5px);
+	}
+	.search {
+		width: calc(50px + 20px);
+	}
 
 }
