@@ -44,10 +44,6 @@ class PictureSlider extends HTMLElement {
             #left { left: 4%; }
             #right { right: 4%; }
             div {
-              position: absolute;
-              top: 10%;
-              bottom: 10%;
-              left: 10%;
               width: 80%;
               box-sizing: border-box;
               margin:0;
@@ -141,3 +137,11 @@ const Slide = function ( imageURL, container ) {
         }, 50 )
     }
 }
+
+
+
+
+              // position: absolute;
+              // top: 10%;
+              // bottom: 10%;
+              // left: 10%;
