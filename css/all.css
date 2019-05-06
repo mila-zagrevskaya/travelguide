@@ -77,7 +77,7 @@ body {
 .text,
 .search,
 .description,
-.button  {
+.btn  {
 	width: calc(80% - 20px);
 	vertical-align: top;
 	color:  var(--content-color);
@@ -91,7 +91,7 @@ body {
 }
 .text:focus,
 .search:focus,
-.button:hover  {
+.btn:hover  {
 	outline: none;
 	border: 1px solid  var(--decoration-color);
 	background-color: #e8e1d7;
@@ -116,12 +116,14 @@ body {
 .items {
 	font-weight: normal;
 }
-.button {
+.btn {
 	width: calc(40% - 10px);
 	margin: 30px 5px;
 }
-
-
+.slider {
+	position: relative;
+	
+}
 
 
 
@@ -173,7 +175,7 @@ footer .menu {
 	.description {
 		width: 95%;
 	}
-	.button {
+	.btn {
 		width: calc(65% - 10px);
 	}
 
