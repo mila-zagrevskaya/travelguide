@@ -45,18 +45,18 @@ h1 {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 3px 5px;
 }
-.nav-items a {
+.nav-items  {
 	margin: 5px 10px;
 	padding: 2px;
 	color:  var(--main-color);
 	text-decoration: none;
 	
 }
-.nav-items a:hover {
+.nav-items:hover {
 	color:  var(--decoration-color);
 }
 .text-holder {
@@ -70,7 +70,8 @@ h1 {
 }
 .text,
 .search,
-.description  {
+.description,
+.button  {
 	width: calc(80% - 20px);
 	vertical-align: top;
 	color:  var(--content-color);
@@ -83,7 +84,8 @@ h1 {
 	padding: 5px 10px;
 }
 .text:focus,
-.search:focus {
+.search:focus,
+.button:hover  {
 	outline: none;
 	border: 1px solid  var(--decoration-color);
 	background-color: #e8e1d7;
@@ -107,9 +109,12 @@ h1 {
 }
 .items {
 	font-weight: normal;
-	
 }
-
+.button {
+	min-width: 150px;
+	width: calc(45% - 20px);
+	margin: 30px 5px;
+}
 
 
 
@@ -127,7 +132,7 @@ h1 {
 .footer {
 	color:  var(--main-color);
 	background-color: #c8c4be;
-	margin: 40px 0 0;
+	/*margin: 40px 0 0;*/
 }
 .logo {
 	margin-left: 50px;
@@ -140,6 +145,18 @@ h1 {
 
 /*_____________*/
 @media (max-width: 768px) {
+	.header {
+		padding: 30px 0px;
+	}
+	h1 {
+		text-align: center;
+	}
+	.menu {
+		
+	}
+	.nav-items a {
+		margin: 5px;
+	}
 	.text-holder {
 		width: calc(95% - 5px);
 	}
