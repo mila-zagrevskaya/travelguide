@@ -16,11 +16,6 @@ class PictureSlider extends HTMLElement {
         let style = document.createElement ( 'style' )
         style.textContent = `
             figure {
-                position: absolute;
-                top: 10%;
-                left: 0;
-                bottom: 10%;
-                right: 0;
                 overflow: hidden;
                 margin: 0;
                 min-height: 300px;
