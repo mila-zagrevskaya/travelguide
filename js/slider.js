@@ -23,6 +23,7 @@ class PictureSlider extends HTMLElement {
                 right: 0;
                 overflow: hidden;
                 margin: 0;
+                min-height: 300px;
             }
             button {
               position: absolute;
