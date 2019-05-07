@@ -1,7 +1,7 @@
 const elem = document.querySelector (".slider").appendChild (
   document.createElement ( 'picture-slider' )
 )
-elem.setAttribute( "src", "../pictures.json" )
+elem.setAttribute( "src", "pictures.json" )
 
 class PictureSlider extends HTMLElement {
     constructor () {
