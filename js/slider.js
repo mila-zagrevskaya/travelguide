@@ -40,8 +40,9 @@ class PictureSlider extends HTMLElement {
             #right { right: 4%; }
             div {
               width: 80%;
+              min-height: 300px;
               box-sizing: border-box;
-              margin:0;
+              margin:0 auto;
               background-repeat: no-repeat;
               background-size: contain;
               background-position: center center;
