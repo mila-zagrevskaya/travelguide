@@ -40,16 +40,15 @@ class PictureSlider extends HTMLElement {
             #right { right: 4%; }
             div {
               position: absolute;
-              width: 80%;
-              min-height: 300px;
+              top: 10%;
+              bottom: 10%;
+              left: 10%;
+              width: calc(80% - 10px);
               box-sizing: border-box;
-              margin:0 auto;
+              margin:0;
               background-repeat: no-repeat;
               background-size: contain;
               background-position: center center;
-              background-color: rgba(117, 117, 117, 0.565);
-              border: 1px solid #492f30;
-              padding: 3px;
               transition: all 0.8s;
             }
         `
@@ -145,3 +144,5 @@ const Slide = function ( imageURL, container ) {
               // top: 10%;
               // bottom: 10%;
               // left: 10%;
+              // background-color: rgba(117, 117, 117, 0.565);
+              // border: 1px solid #492f30;
