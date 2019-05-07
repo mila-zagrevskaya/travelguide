@@ -39,6 +39,7 @@ class PictureSlider extends HTMLElement {
             #left { left: 4%; }
             #right { right: 4%; }
             div {
+              position: absolute;
               width: 80%;
               min-height: 300px;
               box-sizing: border-box;
@@ -46,6 +47,9 @@ class PictureSlider extends HTMLElement {
               background-repeat: no-repeat;
               background-size: contain;
               background-position: center center;
+              background-color: rgba(117, 117, 117, 0.565);
+              border: 1px solid #492f30;
+              padding: 3px;
               transition: all 0.8s;
             }
         `
