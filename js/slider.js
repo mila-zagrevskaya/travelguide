@@ -138,11 +138,3 @@ const Slide = function ( imageURL, container ) {
 }
 
 
-
-
-              // position: absolute;
-              // top: 10%;
-              // bottom: 10%;
-              // left: 10%;
-              // background-color: rgba(117, 117, 117, 0.565);
-              // border: 1px solid #492f30;
