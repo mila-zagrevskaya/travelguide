@@ -102,12 +102,12 @@ body {
 	width: calc(60px + 20px);
 }
 .description {
-	margin: 50px auto 10px;
+	margin: 0px auto 10px;
 	font-size: 1em;
 	font-weight: normal;
 }
-.description p span,
-.list {
+.recital p span,
+.recital span {
 	font-weight: bold;
 }
 .list {
