@@ -15,8 +15,9 @@ class PictureSlider extends HTMLElement {
         shadow.appendChild ( this.container )
         let style = document.createElement ( 'style' )
         style.textContent = `
+
             figure {
-                position: absolute;
+                position: relative;
                 top: 10%;
                 left: 0;
                 bottom: 10%;
