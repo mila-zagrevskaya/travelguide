@@ -9,16 +9,55 @@ function clearBlock (container) {
 
 
 let makeChoise = document.querySelectorAll(".choise-route").forEach( 
-	function (elem) {
-		elem.addEventListener ( 'click', 
+	function (item) {
+		item.addEventListener ( 'click', 
 			function (event){
 				clearBlock (description)
-				clearBlock (section)
+				clearBlock (slider)
 			}
 		)
 	}
-	
 )	
+	// const elem = document.section.appendChild ( 
+	// 		document.createElement ( 'my-map' ))
+
+	// 	class MyMap extends HTMLElement {
+	// 		constructor () {
+	// 			super ()
+
+	// 			let wrapper = document.createElement ( 'div' )
+	// 	        wrapper.className = "map-container"
+	// 	        this.sector = document.createElement ( 'div' )
+	// 	        sector.id = "mymap"
+		   
+	// 	   	let shadow = this.attachShadow ( { mode: 'open' } )
+ //        	shadow.appendChild ( this.sector )
+ //        	let style = document.createElement ( 'style' )
+ //        	style.textContent = `
+ //        		#mymap {
+ //        			min-height: 500px;
+ //        		}
+ //        		`	
+ //       		}
+	// 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		// const elem = document.description.appendChild ( 
 		// 	document.createElement ( 'choise-route' ))
 
@@ -32,7 +71,7 @@ let makeChoise = document.querySelectorAll(".choise-route").forEach(
 		//         sector.className = "info-sector"
 
 
-		        
+		// 	}		        
 		//         this.picture = document.createElement ( 'img' )
 		//         this.setPicture ( "https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg" )
 		//         wrapper.appendChild ( this.picture )
@@ -49,6 +88,13 @@ let makeChoise = document.querySelectorAll(".choise-route").forEach(
 		// }
 		// customElements.define ( 'choise-route', ChoiseRoute )
 	
+
+
+
+
+
+
+
 // const elem = document.body.appendChild (
 //   document.createElement ( 'picture-slider' )
 // )
@@ -65,28 +111,28 @@ let makeChoise = document.querySelectorAll(".choise-route").forEach(
 //         let shadow = this.attachShadow ( { mode: 'open' } )
 //         shadow.appendChild ( this.container )
 //         let style = document.createElement ( 'style' )
-//         style.textContent = `
-//             figure {
-//                 position: fixed;
-//                 top: 10%;
-//                 left: 0;
-//                 bottom: 10%;
-//                 right: 0;
-//                 overflow: hidden;
-//                 margin: 0;
-//             }
-//             button {
-//               position: absolute;
-//               top: 50%;
-//               font-size: 30px;
-//               z-index: 100;
-//               background: transparent;
-//               border: 0;
-//               color: white;
-//               text-shadow: 3px 3px 5px #00000090;
-//               outline: none;
-//               font-family: monospace;
-//             }
+        // style.textContent = `
+        //     figure {
+        //         position: fixed;
+        //         top: 10%;
+        //         left: 0;
+        //         bottom: 10%;
+        //         right: 0;
+        //         overflow: hidden;
+        //         margin: 0;
+        //     }
+        //     button {
+        //       position: absolute;
+        //       top: 50%;
+        //       font-size: 30px;
+        //       z-index: 100;
+        //       background: transparent;
+        //       border: 0;
+        //       color: white;
+        //       text-shadow: 3px 3px 5px #00000090;
+        //       outline: none;
+        //       font-family: monospace;
+        //     }
 //             button:hover {
 //               font-size: 32px;
 //               text-shadow: 2px 2px 4px #000000b0;
@@ -166,6 +212,7 @@ let makeChoise = document.querySelectorAll(".choise-route").forEach(
 //     }
 
 // }
+
 // customElements.define ( 'choise-route', ChoiseRoute )
 
 // const Slide = function ( imageURL, container ) {

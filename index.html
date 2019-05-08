@@ -49,12 +49,26 @@
 								Спланировать длинный маршрут или большое путешествие 
 							</li>
 						</ul>
-						<button class="btn choise-route" id = "begin">Приступить</button>
+						<button class="btn choise-route">Приступить</button>
 					</div>
 				</div>
 				<div class="section">
 					<div class="slider">
 						<div id="wt-sky-root"></div>
+					</div>
+					<div class="map-container"> 
+						<div id="mymap"></div> 
+						<script> 
+							var map;
+      						function initMap() {
+        						map = new google.maps.Map(document.getElementById('mymap'), {
+          							center: {lat: 49.9967099, lng: 36.218107},
+          							zoom: 12
+        						});
+      						}
+    					</script>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDywW1xNiLBD-ySMGdGX-3Y9ZWj3OvxhR0&callback=initMap" >
+    					</script>
 					</div>
 				</div>
 			</main>
@@ -78,7 +92,7 @@
 	</footer>
 
 <script src = "js/maketheway.js"></script>
-<script src = "js/slider.js" defer></script>
+<script src = "js/slider.js"></script>
 <script src = "js/index.js"></script>
 </body >
 </html>

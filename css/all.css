@@ -78,7 +78,7 @@ body {
 .search,
 .description,
 .btn  {
-	width: calc(80% - 10px);
+	width: calc(90% - 5px);
 	vertical-align: top;
 	color:  var(--content-color);
 	font-weight: bold;
@@ -122,14 +122,15 @@ body {
 }
 .section {
 	margin: 0px auto 10px;
-	width: calc(80% - 10px);
+	width: calc(90% - 5px);
 }
 .slider {
 	position: relative;
-	
+
 }
-
-
+#mymap {
+	min-height: 500px;
+}
 
 
 
