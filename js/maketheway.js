@@ -8,12 +8,17 @@ function clearBlock (container) {
 }
 
 
-let makeChoise = document.querySelector(".btn").addEventListener (
-	'click', function (event){
-		clearBlock (description)
-		clearBlock (section)
-
-
+let makeChoise = document.querySelectorAll(".choise-route").forEach( 
+	function (elem) {
+		elem.addEventListener ( 'click', 
+			function (event){
+				clearBlock (description)
+				clearBlock (section)
+			}
+		)
+	}
+	
+)	
 		// const elem = document.description.appendChild ( 
 		// 	document.createElement ( 'choise-route' ))
 
@@ -25,7 +30,7 @@ let makeChoise = document.querySelector(".btn").addEventListener (
 		//         wrapper.className = "container"
 		//         this.sector = document.createElement ( 'div' )
 		//         sector.className = "info-sector"
-		        
+
 
 		        
 		//         this.picture = document.createElement ( 'img' )
@@ -43,9 +48,7 @@ let makeChoise = document.querySelector(".btn").addEventListener (
 		// 	}
 		// }
 		// customElements.define ( 'choise-route', ChoiseRoute )
-	}
-)
-
+	
 // const elem = document.body.appendChild (
 //   document.createElement ( 'picture-slider' )
 // )
