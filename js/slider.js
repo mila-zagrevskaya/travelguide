@@ -42,8 +42,8 @@ class PictureSlider extends HTMLElement {
               font-size: 32px;
               text-shadow: 2px 2px 4px #000000b0;
             }
-            #left { left: 4%; }
-            #right { right: 4%; }
+            #left { left: 0%; }
+            #right { right: 0%; }
             div {
               position: absolute;
               top: 10%;

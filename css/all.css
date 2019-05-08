@@ -120,6 +120,10 @@ body {
 	width: calc(40% - 10px);
 	margin: 30px 5px;
 }
+.section {
+	margin: 0px auto 10px;
+	width: calc(80% - 10px);
+}
 .slider {
 	position: relative;
 	
@@ -172,7 +176,8 @@ footer .menu {
 	.search {
 		width: calc(50px + 20px);
 	}
-	.description {
+	.description,
+	.section {
 		width: 95%;
 	}
 	.btn {
