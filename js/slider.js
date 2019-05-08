@@ -24,7 +24,7 @@ class PictureSlider extends HTMLElement {
                 right: 0;
                 overflow: hidden;
                 margin: 0;
-                min-height: 600px;
+                min-height: 500px;
             }
             button {
               position: absolute;
@@ -48,8 +48,9 @@ class PictureSlider extends HTMLElement {
               position: absolute;
               top: 10%;
               bottom: 10%;
-              left: 5%;
+              left: 10%;
               width: calc(80% - 10px);
+              min-height: 600px;
               box-sizing: border-box;
               margin:0;
               background-repeat: no-repeat;
