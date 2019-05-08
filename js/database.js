@@ -13,4 +13,3 @@ const kharkov = [
 
 
 
-// Key google maps API - AIzaSyDywW1xNiLBD-ySMGdGX-3Y9ZWj3OvxhR0
