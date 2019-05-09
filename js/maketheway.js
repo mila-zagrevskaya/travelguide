@@ -1,5 +1,6 @@
 let description = document.querySelector (".description")
 let section = document.querySelector (".section")
+let slider = document.querySelector (".slider")
 
 function clearBlock (container) {
  	while ( container.firstChild) {
