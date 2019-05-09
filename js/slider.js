@@ -46,8 +46,8 @@ class PictureSlider extends HTMLElement {
             #right { right: 0%; }
             div {
               position: absolute;
-              top: 10%;
-              bottom: 10%;
+              top: 5%;
+              bottom: 5%;
               left: 10%;
               width: calc(80% - 10px);
               box-sizing: border-box;
