@@ -1,7 +1,7 @@
 const elem = document.querySelector (".slider").appendChild (
   document.createElement ( 'picture-slider' )
 )
-elem.setAttribute( "src", "data_files/pictures.json" )
+elem.setAttribute( "src", "pictures.json" )
 
 class PictureSlider extends HTMLElement {
     constructor () {
@@ -15,7 +15,6 @@ class PictureSlider extends HTMLElement {
         shadow.appendChild ( this.container )
         let style = document.createElement ( 'style' )
         style.textContent = `
-
             figure {
                 position: relative;
                 top: 10%;
@@ -46,8 +45,8 @@ class PictureSlider extends HTMLElement {
             #right { right: 0%; }
             div {
               position: absolute;
-              top: 10%;
-              bottom: 10%;
+              top: 5%;
+              bottom: 5%;
               left: 10%;
               width: calc(80% - 10px);
               box-sizing: border-box;
@@ -57,6 +56,12 @@ class PictureSlider extends HTMLElement {
               background-position: center center;
               transition: all 0.8s;
             }
+            @media (max-width: 768px) {
+                figure {
+                    min-height: 350px;
+                }
+            }
+
         `
         shadow.appendChild ( style )
 
@@ -142,5 +147,3 @@ const Slide = function ( imageURL, container ) {
         }, 50 )
     }
 }
-
-
