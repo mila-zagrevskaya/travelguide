@@ -36,6 +36,7 @@ class PictureSlider extends HTMLElement {
               text-shadow: 3px 3px 5px #00000090;
               outline: none;
               font-family: monospace;
+              padding: 3px 1px;
             }
             button:hover {
               font-size: 32px;
@@ -47,8 +48,8 @@ class PictureSlider extends HTMLElement {
               position: absolute;
               top: 5%;
               bottom: 5%;
-              left: 10%;
-              width: calc(83% - 2px);
+              left: 8%;
+              width: calc(85% - 2px);
               box-sizing: border-box;
               margin:0;
               background-repeat: no-repeat;
