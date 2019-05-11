@@ -1,24 +1,4 @@
-let description = document.querySelector (".description")
-let section = document.querySelector (".section")
-let slider = document.querySelector (".slider")
 
-function clearBlock (container) {
- 	while ( container.firstChild) {
-	    container.removeChild( container.firstChild);
-	}
-}
-
-
-let makeChoise = document.querySelectorAll(".choise-route").forEach( 
-	function (item) {
-		item.addEventListener ( 'click', 
-			function (event){
-				clearBlock (description)
-				clearBlock (slider)
-			}
-		)
-	}
-)	
 	// const elem = document.section.appendChild ( 
 	// 		document.createElement ( 'my-map' ))
 

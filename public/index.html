@@ -58,17 +58,7 @@
 					</div>
 					<div class="map-container"> 
 						<div id="mymap"></div> 
-						<script> 
-							var map;
-      						function initMap() {
-        						map = new google.maps.Map(document.getElementById('mymap'), {
-          							center: {lat: 49.9967099, lng: 36.218107},
-          							zoom: 12
-        						});
-      						}
-    					</script>
-						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDywW1xNiLBD-ySMGdGX-3Y9ZWj3OvxhR0&callback=initMap" >
-    					</script>
+						
 					</div>
 				</div>
 			</main>
@@ -94,5 +84,7 @@
 <script src = "js/maketheway.js"></script>
 <script src = "js/slider.js"></script>
 <script src = "js/index.js"></script>
+<script src = "js/myMap.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDywW1xNiLBD-ySMGdGX-3Y9ZWj3OvxhR0&callback=initMap"></script>
 </body >
 </html>

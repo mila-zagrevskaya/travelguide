@@ -143,7 +143,7 @@ body {
 
 .footer {
 	color:  var(--main-color);
-	background-color: #c8c4be;
+	background-color: #bfbbb5;;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
