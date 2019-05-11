@@ -1,2 +1,2 @@
 # travelguide
-https://mila-zagrevskaya.github.io/travelguide/
+https://mila-zagrevskaya.github.io/travelguide/public
