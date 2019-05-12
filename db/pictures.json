@@ -1,20 +1,20 @@
 {
 	"pictures":
 		[
-			"../images/kharkov/park_shevchenko.jpg",
-			"../images/kharkov/metalist.jpg",
-			"../images/kharkov/gorkiypark.jpg",
-			"../images/kharkov/ploschad_konstitucii.jpg",
-			"../images/kharkov/ploshha-svobody.jpg",
-			"../images/kharkov/privokzalna.jpg",
-			"../images/kharkov/zerkalnayastruya.jpg",
-			"../images/kharkov/hatob.jpg",
-			"../images/kharkov/sargin-yar-letom.jpg",
-			"../images/kharkov/vliublionnym.jpg",
-			"../images/kharkov/gradusnik.jpg",
-			"../images/kharkov/mariinskiymost.jpg",
-			"../images/kharkov/smotrovayapl.jpg",
-			"../images/kharkov/kaskad.jpg"
+			"public/images/kharkov/gorkiypark.jpg",
+			"public/images/kharkov/metalist.jpg",
+			"public/images/kharkov/gorkiypark.jpg",
+			"public/images/kharkov/ploschad_konstitucii.jpg",
+			"public/images/kharkov/ploshha-svobody.jpg",
+			"public/images/kharkov/privokzalna.jpg",
+			"public/images/kharkov/zerkalnayastruya.jpg",
+			"public/images/kharkov/hatob.jpg",
+			"public/images/kharkov/sargin-yar-letom.jpg",
+			"public/images/kharkov/vliublionnym.jpg",
+			"public/images/kharkov/gradusnik.jpg",
+			"public/images/kharkov/mariinskiymost.jpg",
+			"public/images/kharkov/smotrovayapl.jpg",
+			"public/images/kharkov/kaskad.jpg"
 		]
 
 }
