@@ -21,9 +21,9 @@ function initMap() {
 
 
   
-  var flightPlanCoordinates = function (){
+  // var flightPlanCoordinates = function (){
     
-  }
+  // }
 
   var flightPath = new google.maps.Polyline({
             path: flightPlanCoordinates,

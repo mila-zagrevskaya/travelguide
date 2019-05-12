@@ -198,7 +198,7 @@ function createWay (){
 		.then (
 			json => json.forEach (
 				container => 
-					var choiseWay = 
+					var choiseWay 
 			)
 		)
 	))
