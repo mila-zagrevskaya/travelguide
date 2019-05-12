@@ -18,25 +18,6 @@ function initMap() {
       InfoWindow.open(myMap, marker)
   })
 
-  // fetch ( 'geo.json' )
-  //   .then(
-  //       response => response.json()
-  //          .then (
-  //              response => response.forEach (
-  //                  item => (
-  //                       elem => [ { coordinates: item.prop.coordinates }, { title: item.title} ]
-  //                           .forEach ( attr => Object.assign ( elem, attr ))
-  //                  )(
-  //                     document.querySelector(".result1")
-  //                         .appendChild (
-  //                            document.createElement("img")
-  //                         )
-  //                  )
-  //              )
-  //         )
-  //   )
-
-
 
 
   

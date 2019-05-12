@@ -14,17 +14,13 @@ document.querySelector('.logo').addEventListener('click', function(event) {
     pageUp();
 })
 
-
+function testUserText (userText) {
+	return userText.split ("<").join ("&lt")
+}
 
 function clearBlock (container) {
- 	// while ( container.firstChild) {
-	    // container.removeChild( container.firstChild);
-	    container.style.display = "none"
-
-	// }
-}
-function changeContent (container) {
-	container.textContent = ""
+ 	container.style.display = "none"
+ 	container.style.transition = "all 0.5s"
 }
 
 
@@ -44,3 +40,4 @@ logo.addEventListener ('click', function (event){
 	recital.style.display = "block"
 	slider.style.display = "block"
 })
+

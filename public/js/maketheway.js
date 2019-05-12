@@ -1,74 +1,159 @@
+let description = document.querySelector (".description")
+let section = document.querySelector (".section")
+let slider = document.querySelector (".slider")
+let recital = document.querySelector (".recital")
+let logo = document.querySelector (".logotype")
 
-	// const elem = document.section.appendChild ( 
-	// 		document.createElement ( 'my-map' ))
-
-	// 	class MyMap extends HTMLElement {
-	// 		constructor () {
-	// 			super ()
-
-	// 			let wrapper = document.createElement ( 'div' )
-	// 	        wrapper.className = "map-container"
-	// 	        this.sector = document.createElement ( 'div' )
-	// 	        sector.id = "mymap"
-		   
-	// 	   	let shadow = this.attachShadow ( { mode: 'open' } )
- //        	shadow.appendChild ( this.sector )
- //        	let style = document.createElement ( 'style' )
- //        	style.textContent = `
- //        		#mymap {
- //        			min-height: 500px;
- //        		}
- //        		`	
- //       		}
-	// 	}
+function clearBlock (container) {
+ 	container.style.display = "none"
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// const elem = document.description.appendChild ( 
-		// 	document.createElement ( 'choise-route' ))
-
-		// class ChoiseRoute extends HTMLElement {
-		// 	constructor () {
-		// 		super ()
-
-		// 		let wrapper = document.createElement ( 'div' )
-		//         wrapper.className = "container"
-		//         this.sector = document.createElement ( 'div' )
-		//         sector.className = "info-sector"
-
-
-		// 	}		        
-		//         this.picture = document.createElement ( 'img' )
-		//         this.setPicture ( "https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg" )
-		//         wrapper.appendChild ( this.picture )
-		//         this.picture.angle = 0
-		//         this.button = document.createElement ( 'button' )
-		//         this.button.innerText = 'ROTATE'
-		//         this.button.onclick = this.rotatePicture.bind ( this )
-		//         wrapper.appendChild ( this.button )
-
-		//         let style = document.createElement ( 'style' )
-		//         style.textContent = ``
+class ChoiseWay extends HTMLElement {
+    constructor (){
+        super ()
+        this.shadow = this.attachShadow ( {mode: 'open'})
+        this.content = this.innerText
+        this.shadow.innerHTML = ` 
+         <style>
+           	.description,
+			.plase-info,
+			.plase-photo{
+    			width: calc(90% - 5px);
+    			vertical-align: center;
+    			color: #fff;
+    			font-weight: bold;
+    			font-size: 1em;
+    			line-height: 1em;
+    			border: 1px solid #492f30;
+    			border-radius: 3px;
+    			background-color: #c8c4be;
+    			padding: 5px 10px;
+			}
+			.plase-container {
+  				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: stretch; 
+				margin: 10px 0;
+				padding: 15px 1px;
+  				border-bottom: 1px solid #492f30;
+ 			}
+			.plase-info {
+				width: calc(70% - 5px);
+				background-size: cover;
+			  	background-image: url(http://gx.net.ua/news_images/1483543026.jpg)
+			}
+			.plase {
+			  	background-color:  #492f30;
+			  	padding: 5px 10px;
+			  	opacity: 0.9;
+			}
+			.plase-photo {
+ 				width: calc(30% - 5px);
+  				margin-left: 5px;
+ 				background-size: cover;
+ 				background-image: url(http://gx.net.ua/news_images/1483543026.jpg)
+			} 
+			.info-title {
+			   border-bottom: 1px solid #a7b3af;
+			}
+ 			h5 {
+ 			  	margin: 0;
+ 			}
+ 			.info-title span {
+ 			  	font-size: 10px;
+ 			}
+			.plase-info p {
+			   	font-size: 14px;
+			   	font-weight: 400;
+			}
+			input[type = "checkbox"] {
+			  display: none;
+			}
+			label {
+			  padding-left: 20px;
+			}
+			label::before {
+			  content: "";
+			  position: relative;
+			  top: 40%;
+			  display: inline-block;
+			  width: 20px;
+			  height: 20px;
+			  background-color: #a7b3af;
+			  border: 1px solid #492f30;
+			  border-radius: 3px;
+			  vertical-align: middle;
+			  margin-left: -10px;
+			  margin-right: 10px;
+			    padding: 1px;
+			}
+			input[type = "checkbox"]:checked + label::before {
 			
-		// 	}
-		// }
-		// customElements.define ( 'choise-route', ChoiseRoute )
-	
+			  content: "*";
+			  color: #492f30;
+			  text-align: center;
+			  font-size: 18px;
+			  font-weight: bold;
+			}
+		</style>
+		<div class="plase-container ">
+			<div>
+				<input type="checkbox" id="plase-check" name="plase-check">
+				<label for="plase-check">  </label>
+			</div>
+			<div class="plase-info">
+				<div class="plase">
+					<div class = "info-title"> 
+						<h5></h5>
+						<span></span>
+					</div>
+					<p></p>
+				</div>
+			</div>
+			<div class="plase-photo"></div>
+		</div>
+    `
+
+	    connectedCallBack() {
+	    	this.shadow.querySelector('input[type="checkbox"]').addEventListener(
+	    		'check', moreInfoButton)
+        	
+
+	    }
+
+	    static get observedAttributes() {
+	       return [ "name", 'adress', 'info', "image" ]
+	    }
+	    attributeChangedCallback( attrName, oldVal, newVal ) {
+	      	attrName === 'name' ? this.shadow.querySelector ("h5").innerText = newVal : null
+	       	attrName === 'adress' ? this.shadow.querySelector (".info-title span").innerText = newVal : null
+	    	attrName === 'info' ? this.shadow.querySelector (".plase-info p").innerText = newVal : null
+	    	attrName === 'image' ? this.shadow.querySelector (".plase-photo").innerText = newVal : null
+	    } 
+    
+	}
+
+}
+customElements.define ("choise-way", ChoiseWay)
+
+
+
+
+
+
+let makeChoise = document.querySelectorAll(".choise-route").forEach( 
+	function (item) {
+		item.addEventListener ( 'click', 
+			function (event){
+				clearBlock  (recital)
+				clearBlock (slider)
+				customElements.define ("choise-way", ChoiseWay)
+			}
+		)
+	}
+)	
 
 
 
@@ -76,146 +161,6 @@
 
 
 
-// const elem = document.body.appendChild (
-//   document.createElement ( 'picture-slider' )
-// )
-// elem.setAttribute( "src", "data_files/pictures.json" )
-
-// class PictureSlider extends HTMLElement {
-//     constructor () {
-//         super()
-//         this.pictures = []
-//         this.container = this.createElem ( 'figure' )
-//         this.loadData ( this.getAttribute('src') )
-//         this.currentIndex = 0
-//         this.currentSlide = 0
-//         let shadow = this.attachShadow ( { mode: 'open' } )
-//         shadow.appendChild ( this.container )
-//         let style = document.createElement ( 'style' )
-        // style.textContent = `
-        //     figure {
-        //         position: fixed;
-        //         top: 10%;
-        //         left: 0;
-        //         bottom: 10%;
-        //         right: 0;
-        //         overflow: hidden;
-        //         margin: 0;
-        //     }
-        //     button {
-        //       position: absolute;
-        //       top: 50%;
-        //       font-size: 30px;
-        //       z-index: 100;
-        //       background: transparent;
-        //       border: 0;
-        //       color: white;
-        //       text-shadow: 3px 3px 5px #00000090;
-        //       outline: none;
-        //       font-family: monospace;
-        //     }
-//             button:hover {
-//               font-size: 32px;
-//               text-shadow: 2px 2px 4px #000000b0;
-//             }
-//             #left { left: 4%; }
-//             #right { right: 4%; }
-//             div {
-//               position: absolute;
-//               top: 10%;
-//               bottom: 10%;
-//               left: 10%;
-//               width: 80%;
-//               box-sizing: border-box;
-//               margin:0;
-//               background-repeat: no-repeat;
-//               background-size: contain;
-//               background-position: center center;
-//               transition: all 0.8s;
-//             }
-//         `
-//         shadow.appendChild ( style )
-
-//         this.btnLeft = this.createElem ( 'button', this.container )
-//         this.btnLeft.id = 'left'
-//         this.btnLeft.onclick = () => this.changePicture ( "left" )
-//         this.btnRight = this.createElem ( 'button', this.container )
-//         this.btnRight.id = 'right'
-//         this.btnRight.onclick = () => this.changePicture ( "right" )
-//         this.btnLeft.innerHTML = '<'
-//         this.btnRight.innerHTML = '>'
-
-//     }
-//     createElem ( tagName, container ) {
-//         return  ( !container ? document.body : container )
-//                 .appendChild (
-//                   document.createElement ( tagName )
-//                 )
-//     }
-
-//     async loadData ( jsonURL ) {
-//         let promise = fetch ( jsonURL )
-//             .then ( response => response.json() )
-//         this.pictures = await promise
-//         this.slides = []
-//         this.slides [ 0 ] = new Slide (
-//                         this.pictures [ 0 ],
-//                         this.container
-//         )
-//         this.slides [ 0 ].mcFromTo ( 100, 10 )
-//         this.slides [ 1 ] = new Slide (
-//                         this.pictures [ 1 ],
-//                         this.container
-//         )
-//         this.slides [ 1 ].init ( 100 )
-//     }
-
-//     changePicture ( direction ) {
-//         let to = direction === 'left' ? 100 : -100
-//         let nextSlide = this.currentSlide === 0 ? 1 : 0
-//         let nextIndex = this.getNextIndex ( direction )
-//         this.slides [ nextSlide ].setPicture ( this.pictures [ nextIndex ] )
-//         this.slides [ nextSlide ].init ( -to )
-//         this.slides [ this.currentSlide ].mcFromTo ( 10, to, 0 )
-//         this.slides [ nextSlide ].mcFromTo ( -to, 10, 1 )
-//         setTimeout ( function () {
-//             this.currentSlide = nextSlide
-//             this.currentIndex = nextIndex
-//         }.bind(this), 1000 )
-//     }
-
-//     getNextIndex ( dir ) {
-//       return dir === 'left' ?
-//             ( this.currentIndex === 0 ?
-//                 this.pictures.length - 1 : this.currentIndex - 1 ) :
-//             ( this.currentIndex === this.pictures.length - 1 ?
-//                 0 : this.currentIndex + 1 )
-//     }
-
-// }
-
-// customElements.define ( 'choise-route', ChoiseRoute )
-
-// const Slide = function ( imageURL, container ) {
-//     this.imageURL = imageURL
-//     let elem = container.appendChild (
-//       document.createElement ( 'div' )
-//     )
-//     elem.style = `background-image: url(${imageURL});`
-//     this.init = x => {
-//         elem.style.left = x + '%'
-//     }
-//     this.setPicture = pictureURL =>
-//         elem.style.backgroundImage = `url(${pictureURL})`
-
-//     this.mcFromTo = function ( from, to, finalOpacity ) {
-//         elem.style.transition = 'none'
-//         elem.style.left = from + '%'
-//         elem.style.opacity = 1 - finalOpacity
-//         setTimeout ( function () {
-//             elem.style.transition = 'all 0.8s'
-//             elem.style.left = to + '%'
-//             elem.style.opacity = finalOpacity
-//         }, 50 )
-//     }
-// }
+//input[type = "checkbox"]:checked + label::before {
+	  // content: "\2714";
+//}
