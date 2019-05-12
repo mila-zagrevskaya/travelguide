@@ -119,6 +119,7 @@ body {
 .btn {
 	width: calc(40% - 10px);
 	margin: 30px 5px;
+	outline: none;
 }
 .section {
 	margin: 0px auto 10px;

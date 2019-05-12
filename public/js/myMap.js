@@ -14,9 +14,9 @@ function initMap() {
     content: `<p> Hello</p>`,
   })
   
-  marker.addListener ('click', function (event){
-      InfoWindow.open(myMap, marker)
-  })
+  // marker.addListener ('click', function (event){
+  //     InfoWindow.open(myMap, marker)
+  // })
 
 
 

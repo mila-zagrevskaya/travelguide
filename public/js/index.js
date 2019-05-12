@@ -1,6 +1,6 @@
-let description = document.querySelector (".description")
+var description = document.querySelector (".description")
 let section = document.querySelector (".section")
-let slider = document.querySelector (".slider")
+var slider = document.querySelector (".slider")
 let recital = document.querySelector (".recital")
 let logo = document.querySelector (".logotype")
 
@@ -17,24 +17,6 @@ document.querySelector('.logo').addEventListener('click', function(event) {
 function testUserText (userText) {
 	return userText.split ("<").join ("&lt")
 }
-
-function clearBlock (container) {
- 	container.style.display = "none"
- 	container.style.transition = "all 0.5s"
-}
-
-
-let makeChoise = document.querySelectorAll(".choise-route").forEach( 
-	function (item) {
-		item.addEventListener ( 'click', 
-			function (event){
-				clearBlock  (recital)
-				clearBlock (slider)
-			}
-		)
-	}
-)	
-
 
 logo.addEventListener ('click', function (event){
 	recital.style.display = "block"

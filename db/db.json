@@ -1,4 +1,22 @@
 { 
+	"pictures":
+		[
+			"public/images/kharkov/gorkiypark.jpg",
+			"public/images/kharkov/metalist.jpg",
+			"public/images/kharkov/gorkiypark.jpg",
+			"public/images/kharkov/ploschad_konstitucii.jpg",
+			"public/images/kharkov/ploshha-svobody.jpg",
+			"public/images/kharkov/privokzalna.jpg",
+			"public/images/kharkov/zerkalnayastruya.jpg",
+			"public/images/kharkov/hatob.jpg",
+			"public/images/kharkov/sargin-yar-letom.jpg",
+			"public/images/kharkov/vliublionnym.jpg",
+			"public/images/kharkov/gradusnik.jpg",
+			"public/images/kharkov/mariinskiymost.jpg",
+			"public/images/kharkov/smotrovayapl.jpg",
+			"public/images/kharkov/kaskad.jpg"
+		],
+		
 	"kharkov" : [
 		{
 			"name": "ЦПКиО им. М. Горького",
@@ -6,7 +24,7 @@
 			"coordinates": {"lat": 50.0163106, "lng": 36.246678},
 			"image": "images/kharkov/gorkiypark.jpg",
 			"info": "Главный и самый большой парк Харькова. Обладатель международной премии «Golden Pony Awards-2013» за современную концепцию и тематическое оформление.",
-			"mark": ""
+			"id": "1"
 		},
 		{
 			"name": "Площадь Свободы / Freedom Square",
@@ -14,7 +32,7 @@
 			"coordinates": {"lat": 50.005195, "lng": 36.2295846},
 			"image": "images/kharkov/ploshha-svobody.jpg",
 			"info": "Харьковская площадь Свободы является 12-й по величине на всей планете Земля, и 6-й - в Европе. Её территория занимает 11 гектаров.",
-			"mark": ""		
+			"id": "2"		
 		},
 		{
 			"name": "ОСК «Металіст» / Metalist Stadium",
@@ -22,7 +40,7 @@
 			"coordinates": {"lat": 49.9797947, "lng": 36.2591195},
 			"image": "images/kharkov/metalist.jpg",
 			"info": "«Металлист» — центральный стадион города Харьков. Стадион и кассовый павильон стадиона занесены в Реестр культурно-национального наследия Украины.",
-			"mark": ""		
+			"id": "3"		
 		},
 		{
 			"name": "Площадь Конституции / Constitution Square",
@@ -30,7 +48,7 @@
 			"coordinates": {"lat": 49.9910202, "lng": 36.2303915},
 			"image": "images/kharkov/ploschad_konstitucii.jpg",
 			"info": "Площадь Конституции – это самая древняя из площадей Харькова. Дата основания - 1659 год, с того времени до наших дней площадь сменила множество названий.",
-			"mark": ""		
+			"id": "4"		
 		},
 		{
 			"name": "Привокзальная площадь / Pryvokzalna Square",
@@ -38,7 +56,7 @@
 			"coordinates": {"lat": 49.9894572, "lng": 36.2021105},
 			"image": "images/kharkov/privokzalna.jpg",
 			"info": "Привокзальная площадь – место отдыха, здесь люди ждут свой поезд. Ее украшением являются множество клумб и фонтан.",
-			"mark": ""		
+			"id": "5"		
 		},
 		{
 			"name": "Сад им. Т. Г. Шевченко",
@@ -46,7 +64,7 @@
 			"coordinates": {"lat": 50.0007541, "lng": 36.2260388},
 			"image": "images/kharkov/park_shevchenko.jpg",
 			"info": "На территории парка установлено несколько памятников и монументов, среди которых памятник Тарасу Шевченко, а также памятник Василию Каразину, памятник футбольному мячу, памятник репрессированным кобзарям, памятник архангелу Михаилу, памятник 50 параллель.",
-			"mark": ""
+			"id": "6"
 		},
 		{
 			"name": "Зеркальная струя",
@@ -54,7 +72,7 @@
 			"coordinates": {"lat": 49.9986911, "lng": 36.2322906},
 			"image": "images/kharkov/zerkalnayastruya.jpg",
 			"info": "Фонтан «Зеркальная струя» является одним из наиболее выдающихся архитектурных сооружений Харькова, а также одним из его ярчайших символов. ",
-			"mark": ""
+			"id": "7"
 		},
 		{
 			"name": "ХНАТОБ им. Н. В. Лысенко",
@@ -62,7 +80,7 @@
 			"coordinates": {"lat": 49.9992194, "lng": 36.2300367},
 			"image": "images/kharkov/hatob.jpg",
 			"info": "ХАРЬКОВСКИЙ НАЦИОНАЛЬНЫЙ АКАДЕМИЧЕСКИЙ ТЕАТР ОПЕРЫ И БАЛЕТА им. Н.В. Лысенко.",
-			"mark": ""
+			"id": "8"
 		},
 		{
 			"name": "Парк «Саржин яр»",
@@ -70,7 +88,7 @@
 			"coordinates": {"lat": 50.0267216, "lng": 36.2265335},
 			"image": "images/kharkov/sargin-yar-letom.jpg",
 			"info": "Саржин Яр расположен в двух шагах от центра города, но это настоящий зелёный оазис среди бетонных построек.",
-			"mark": ""
+			"id": "9"
 		},
 		{
 			"name": "Площадь Архитекторов",
@@ -78,7 +96,7 @@
 			"coordinates": {"lat": 49.9986165, "lng": 36.2397148},
 			"image": "images/kharkov/vliublionnym.jpg",
 			"info": "Площадь Архитекторов – одна из самых молодых достопримечательностей Харькова. Площадь открыли 23 августа 2009 года.",
-			"mark": ""
+			"id": "10"
 		},
 		{
 			"name": "Градусник",
@@ -86,7 +104,7 @@
 			"coordinates": {"lat": 49.9935056, "lng": 36.2294946},
 			"image": "images/kharkov/gradusnik.jpg",
 			"info": "Место для встреч и свиданий",
-			"mark": ""
+			"id": "11"
 		},
 		{
 			"name": "Марьинский мост",
@@ -94,7 +112,7 @@
 			"coordinates": {"lat": 49.9847063, "lng": 36.2234931},
 			"image": "images/kharkov/mariinskiymost.jpg",
 			"info": " Пешеходный подвесной мост через реку Харьков. С первых дней новый мост понравился влюбленным и молодоженам, которые вешают на перила замки,  как символ своей любви.",
-			"mark": ""
+			"id": "12"
 		},
 		{
 			"name": "Сквер у Вечного огня",
@@ -102,7 +120,7 @@
 			"coordinates": {"lat": 49.9897977, "lng": 36.2296393},
 			"image": "images/kharkov/smotrovayapl.jpg",
 			"info": "Сквер расположен на возвышенности, поэтому с него отлично видно Благовещенский собор",
-			"mark": ""
+			"id": "13"
 		},
 		{
 			"name": "Фонтан «Каскад»",
@@ -110,7 +128,7 @@
 			"coordinates": {"lat": 49.9991222, "lng": 36.2246668},
 			"image": "images/kharkov/kaskad.jpg",
 			"info": "На вид он напоминает водопад, поэтому стал одним из любимых мест отдыха для жителей и гостей города в жаркую погоду.",
-			"mark": ""
+			"id": "14"
 		}
 	],
 	"kiev" : [
@@ -120,7 +138,7 @@
 			"coordinates": {"lat": 50.0163106, "lng": 36.246678},
 			"image": "images/kharkov/gorkiypark.jpg",
 			"info": "Главный и самый большой парк Харькова. Обладатель международной премии «Golden Pony Awards-2013» за современную концепцию и тематическое оформление.",
-			"mark": ""
+			"id": "15"
 		},
 		{
 			"name": "ЦПКиО им. М. Горького",
@@ -128,7 +146,7 @@
 			"coordinates": {"lat": 50.0163106, "lng": 36.246678},
 			"image": "images/kharkov/gorkiypark.jpg",
 			"info": "Главный и самый большой парк Харькова. Обладатель международной премии «Golden Pony Awards-2013» за современную концепцию и тематическое оформление.",
-			"mark": ""
+			"id": "16"
 		}
 	]		
 }
