@@ -5,6 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Travel guide</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/all.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i">
@@ -20,24 +21,29 @@
 						<li>
 							<a href="#" class = "nav-items">Статьи</a>
 						</li>
-						<li>
-							<a href="#" class = "nav-items">Контакты</a>
+						<li class = "contacts">
+							<a href="#" class = "nav-items contacts">Контакты</a>
+							<div class="phones">
+								<p class="number">+38 (0XX)-XXX-XX-XX</p>
+							</div>
 						</li>
 						<li>
-							<a href="#" class = "nav-items choise-route">Построить маршрут</a>
+							<a href="#" class = "nav-items choise-route" onclick = "getReadyContainer()">Построить маршрут</a>
 						</li>
 					</ul>
 				</div>
-				<div class="logotype"><a href="#"><img src="images/logotype.png" alt="logo"></a></div>
-				<div class="text-holder">
-					<input class="text" type="text"  placeholder="Город" />
-					<button class="search">Найти</button>
+				<div class="logotype">
+					<a href="#"><img src="images/logotype.png" alt="logo"></a>
 				</div>
 			</header>
 			<main class="main" id = "main">
 				<div class="description">
+					<form class="text-holder" onchange = "searchCity()">
+						<input class="text" type="text"  placeholder="Город" />
+						<button type ="submit" class="search">Найти</button>
+					</form>
 					<div class="recital">
-						<p><span>Travel guide</span> - сервис планирования путешествий в любую точку мира. </p>
+						<p><span>Travel guide</span> - сервис планирования путешествий в любой точке мира. </p>
 						<span>С помощью сервиса можно:</span>
 						<ul class="list"> 
 							<li class = "items"> 
@@ -49,9 +55,9 @@
 								Спланировать длинный маршрут или большое путешествие 
 							</li>
 						</ul>
-						<button class="btn choise-route">Приступить</button>
+						<button class="btn choise-route" onclick = "getReadyContainer()">Приступить</button>
 					</div>
-					<choise-way></choise-way>
+					<chose-way class="choseWay"></chose-way>
 				</div>
 				<div class="section">
 					<div class="slider">
@@ -76,7 +82,7 @@
 						<a href="#" class = "nav-items">Контакты</a>
 					</li>
 					<li>
-						<a href="#" class = "nav-items choise-route">Построить маршрут</a>
+						<a href="#" class = "nav-items choise-route" onclick = "getReadyContainer()">Построить маршрут</a>
 					</li>
 				</ul>
 			</div>

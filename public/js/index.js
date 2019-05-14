@@ -16,10 +16,15 @@ document.querySelector('.logo').addEventListener('click', function(event) {
 
 function testUserText (userText) {
 	return userText.split ("<").join ("&lt")
+	console.log (userText)
 }
 
 logo.addEventListener ('click', function (event){
 	recital.style.display = "block"
 	slider.style.display = "block"
 })
+
+
+
+
 

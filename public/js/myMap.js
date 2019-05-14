@@ -25,26 +25,26 @@ function initMap() {
     
   // }
 
-  var flightPath = new google.maps.Polyline({
-            path: flightPlanCoordinates,
-            geodesic: true,
-            strokeColor: '#FF0000',
-            strokeOpacity: 1.0,
-            strokeWeight: 2
-          });
+//   var flightPath = new google.maps.Polyline({
+//             path: flightPlanCoordinates,
+//             geodesic: true,
+//             strokeColor: '#FF0000',
+//             strokeOpacity: 1.0,
+//             strokeWeight: 2
+//           });
 
-  flightPath.setMap(map);
+//   flightPath.setMap(map);
 
 
-flightPlanCoordinates.forEach(function (item){
-  function addMarker (properties){
-    let marker = new google.maps.Marker ({
-      position:  item,
-      map: myMap
-    })
+// flightPlanCoordinates.forEach(function (item){
+//   function addMarker (properties){
+//     let marker = new google.maps.Marker ({
+//       position:  item,
+//       map: myMap
+//     })
 
-  }
-})
+//   }
+// })
 
 
 
