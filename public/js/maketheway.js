@@ -1,9 +1,10 @@
-let choseWay = document.querySelector('.choseWay')
+// let choseWay = document.querySelector('.choseWay')
 var cityArr = []
+// let description = document.document.createElement ("div")
 
 function searchCity (event) {
 	let val = this.event.target.value
-	let choseWay = document.querySelector (".choseWay").style.display = "block"
+	// choseWay = document.querySelector (".choseWay").style.display = "block"
 	
 	fetch ("http://localhost:3000/cities")
 		.then (response => response.json ()
@@ -14,13 +15,19 @@ function searchCity (event) {
 					}
 				}
 			).then(function(response){
-				cityArr[0].forEach(function(item){
-					description.appendChild(choseWay)
-					// choseWay.h5InfoTitle.textContent = item.name
-					// choseWay.spanInfoTitle.textContent = item.adress
-					// choseWay.paragPlace.textContent = item.info
-					// choseWay.imagePlasePhoto.src = item.image
-				})
+				cityArr[0].forEach(
+					function(item, index){
+						let element = document.querySelector (".description").appendChild(
+							document.createElement("choise-way"))
+							element.setAttribute ("coordinates", JSON.stringify(item.coordinates))
+							element.setAttribute ("name", item.name);
+							element.setAttribute ("adress", item.adress)
+							element.setAttribute ("info", item.info)
+							element.setAttribute ("image", item.image)
+							console.log(element.shadow.querySelector ("input"))
+							element.shadow.querySelector ("input").setAttribute ("id", `input${index}`);
+							element.shadow.querySelector ("label").setAttribute ("for", `input${index}`);
+					})
 			})
 		)
 
@@ -38,6 +45,7 @@ function clearBlock (container) {
 function getReadyContainer  (event){
 	clearBlock  (document.querySelector (".recital"))
 	clearBlock (document.querySelector (".slider"))
+	
 }
 
 
@@ -82,6 +90,7 @@ template.innerHTML = `
 			    background-image: url()
 			}
 			.place {
+				width: 100%;
 			  	background-color:  #492f30;
 			  	padding: 5px 10px;
 			  	opacity: 0.8;
@@ -167,20 +176,20 @@ template.innerHTML = `
 			}
 		</style>
 		<div class="place-container ">
-			<input type="checkbox" id="" name="place-check">
+			<input type="checkbox" id="" name="place-check" >
 			<label for="">  </label>
 			<div class="info-wrap">
 				<div class="place-info">
 					<div class="place">
 						<div class = "info-title"> 
-							<h5></h5>
-							<span></span>
+							<h5 class = "name"></h5>
+							<span class = "adress"></span>
 						</div>
-						<p></p>
+						<p class ="info"></p>
 					</div>
 				</div>
 				<div class="place-photo">
-					<img src="" alt="" />
+					<img class = "image" src = "" alt="" />
 				</div>
 			</div>
 		</div>
@@ -191,22 +200,22 @@ class ChoiseWay extends HTMLElement {
     constructor() {
     	super()
      	this.shadow = this.attachShadow({ mode: 'open' })
-        	.appendChild( template.content.cloneNode(true) )
+        this.shadow.appendChild( template.content.cloneNode(true) )
+        this.coordinates = {}
   	}
 
- 	connectedCallBack() {
-	   
-	}
+ 	connectedCallBack() { }
 
 	static get observedAttributes() {
 	   return ["coordinates", "name", "adress", "info", "image"]
 	}
 	attributeChangedCallback( attrName, oldVal, newVal ) {
-	   	attrName === 'coordinates' ? this.shadow.querySelector ("label").innerText = newVal : null
-	  	attrName === 'name' ? this.shadow.querySelector ("h5").innerText = newVal : null
-	   	attrName === 'adress' ? this.shadow.querySelector (".info-title span").innerText = newVal : null
-		attrName === 'info' ? this.shadow.querySelector (".plase-info p").innerText = newVal : null
-		attrName === 'image' ? this.shadow.querySelector (".plase-photo img").innerText = newVal : nul
+	   	attrName === 'coordinates' ? this.coordinates = JSON.parse (newVal) : null
+	   	console.log (this.coordinates)
+	  	attrName === 'name' ? this.shadow.querySelector (".name").innerText = newVal : null
+	   	attrName === 'adress' ? this.shadow.querySelector (".adress").innerText = newVal : null
+		attrName === 'info' ? this.shadow.querySelector (".info").innerText = newVal : null
+		attrName === 'image' ? this.shadow.querySelector (".image").src = newVal : null
 	} 
 }
 

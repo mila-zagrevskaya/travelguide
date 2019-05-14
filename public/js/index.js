@@ -1,6 +1,6 @@
-var description = document.querySelector (".description")
+const description = document.querySelector (".description")
 let section = document.querySelector (".section")
-var slider = document.querySelector (".slider")
+let slider = document.querySelector (".slider")
 let recital = document.querySelector (".recital")
 let logo = document.querySelector (".logotype")
 
