@@ -157,14 +157,6 @@ body {
 	min-height: 500px;
 }
 
-.choseWay {
-	display: none;
-}
-
-
-
-
-
 
 
 
@@ -183,11 +175,6 @@ footer .menu {
 	flex-direction: column;
 	margin-left: 15px;
 }
-
-
-
-
-
 
 
 /*_____________*/

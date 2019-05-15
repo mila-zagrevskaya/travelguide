@@ -22,6 +22,7 @@ function testUserText (userText) {
 logo.addEventListener ('click', function (event){
 	recital.style.display = "block"
 	slider.style.display = "block"
+	cityContainer.textContent = ""
 })
 
 
