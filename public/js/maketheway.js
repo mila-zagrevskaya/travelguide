@@ -1,3 +1,6 @@
+// const port = '3000'
+// let myMap;
+
 let cityContainer = document.querySelector (".city-container")
 let cityArr = []
 
@@ -7,14 +10,10 @@ function clearBlock (container) {
  	container.style.transition = "all 0.5s"
 }
 
-
 function getReadyContainer  (event){
 	clearBlock  (document.querySelector (".recital"))
 	clearBlock (document.querySelector (".slider"))
-
 }
-
-
 
 function searchCity (event) {
 	cityContainer.remove()
@@ -24,7 +23,7 @@ function searchCity (event) {
 	cityArr = []
 
 	var val = this.event.target.value
-	fetch ("http://localhost:3000/cities")
+	fetch ('http://localhost:3000/cities') //http://localhost:${port}/cities
 		.then (response => response.json ()
 			.then (
 				dataObj => {
@@ -50,10 +49,6 @@ function searchCity (event) {
 	getReadyContainer ()
 	
 }
-
-
-
-
 
 
 const template = document.querySelector (".city-container").appendChild (
@@ -223,8 +218,7 @@ class ChoiseWay extends HTMLElement {
 	}
 	attributeChangedCallback( attrName, oldVal, newVal ) {
 	   	attrName === 'coordinates' ? this.coordinates = JSON.parse (newVal) : null
-	   	console.log (this.coordinates)
-	  	attrName === 'name' ? this.shadow.querySelector (".name").innerText = newVal : null
+	    attrName === 'name' ? this.shadow.querySelector (".name").innerText = newVal : null
 	   	attrName === 'adress' ? this.shadow.querySelector (".adress").innerText = newVal : null
 		attrName === 'info' ? this.shadow.querySelector (".info").innerText = newVal : null
 		attrName === 'image' ? this.shadow.querySelector (".image").src = newVal : null
@@ -232,3 +226,76 @@ class ChoiseWay extends HTMLElement {
 }
 
 customElements.define( 'choise-way', ChoiseWay )
+
+
+
+
+/*
+
+// инициируем карту
+
+
+function initMap() {
+  let container =  document.getElementById('mymap')
+  let options = {
+      mapTypeId: 'hybrid',
+      center: {lat: 49.9967099, lng: 36.218107},
+      zoom: 12
+  }
+  myMap = new google.maps.Map(container, options);
+  
+  
+  
+  
+function addMarker (properties) {
+  let marker = new google.maps.Marker ({
+    map: myMap,
+    position: properties.coordinates,
+    info: properties.info
+  })
+  let InfoWindow = new google.maps.InfoWindow ({
+    content: properties.info
+  })
+}
+
+  // marker.addListener ('click', function (event){
+  //     InfoWindow.open(myMap, marker)
+  // })
+
+
+
+
+
+
+  // var flightPlanCoordinates = function (){
+    
+  // }
+
+//   var flightPath = new google.maps.Polyline({
+//             path: flightPlanCoordinates,
+//             geodesic: true,
+//             strokeColor: '#FF0000',
+//             strokeOpacity: 1.0,
+//             strokeWeight: 2
+//           });
+
+//   flightPath.setMap(map);
+
+// flightPlanCoordinates.forEach(function (item){
+//   function addMarker (properties){
+//     let marker = new google.maps.Marker ({
+//       position:  item,
+//       map: myMap
+//     })
+
+//   }
+// })
+
+
+
+
+
+
+}
+
+*/

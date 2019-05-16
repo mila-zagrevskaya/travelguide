@@ -57,10 +57,7 @@
 						</ul>
 						<button class="btn choise-route" onclick = "getReadyContainer()">Приступить</button>
 					</div>
-					<div class="city-container">
-						
-					</div>
-
+					<div class="city-container"></div>
 				</div>
 				<div class="section">
 					<div class="slider">
@@ -68,32 +65,33 @@
 					</div>
 					<div class="map-container"> 
 						<div id="mymap"></div> 
-						
 					</div>
 				</div>
 			</main>
 		</div>
 	</div>
 	<footer class="footer">
-			<div class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
+			<div class="logo up"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
 			<div class="nav">
 				<ul class = "menu">
 					<li>
 						<a href="#" class = "nav-items">Статьи</a>
 					</li>
-					<li>
-						<a href="#" class = "nav-items">Контакты</a>
-					</li>
+					<li class = "contacts">
+							<a href="#" class = "nav-items contacts">Контакты</a>
+							<div class="phones">
+								<p class="number">+38 (0XX)-XXX-XX-XX</p>
+							</div>
+						</li>
 					<li>
 						<a href="#" class = "nav-items choise-route" onclick = "getReadyContainer()">Построить маршрут</a>
 					</li>
 				</ul>
 			</div>
 	</footer>
-
-<script src = "js/maketheway.js"></script>
-<script src = "js/slider.js"></script>
+		
 <script src = "js/index.js"></script>
+<script src = "js/slider.js"></script>
 <script src = "js/myMap.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDywW1xNiLBD-ySMGdGX-3Y9ZWj3OvxhR0&callback=initMap"></script>
 </body >

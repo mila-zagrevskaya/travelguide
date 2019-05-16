@@ -175,7 +175,18 @@ footer .menu {
 	flex-direction: column;
 	margin-left: 15px;
 }
-
+.arrow img {
+	display: none;
+}
+.show img {
+	display: block;
+	width: 35px;
+	position: fixed;
+	bottom: 30px;
+	left: 60px;
+	transition: all 0.5s;
+	z-index: 99;
+}
 
 /*_____________*/
 @media (max-width: 768px) {
