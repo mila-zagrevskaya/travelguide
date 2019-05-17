@@ -153,7 +153,11 @@ body {
 	position: relative;
 
 }
+.map-container {
+	/*display: none;*/
+}
 #mymap {
+	/*display: none;*/
 	min-height: 500px;
 }
 

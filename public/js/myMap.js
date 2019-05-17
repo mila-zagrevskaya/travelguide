@@ -1,78 +1,82 @@
-let myMap;
+// let myMap;
 
 
-let makeWay =  fetch ("../js/maketheway.js")
-    .then (response => response.text ()
-      .then (
-        response => { 
-          document.body.appendChild(
-            document.createElement('script')).textContent = response 
-        }
-      )
-    )
-
-
-
-
+// let makeWay =  
+// fetch ("../js/maketheway.js")
+//     .then (response => response.text ()
+//       .then (
+//         response => { 
+//           document.body.appendChild(
+//             document.createElement('script')).textContent = response 
+//         }
+//       )
+//     )
 
 
 
-function initMap() {
-  let container =  document.getElementById('mymap')
-  let options = {
-      mapTypeId: 'hybrid',
-      center: {lat: 49.9967099, lng: 36.218107},
-      zoom: 12
-  }
-  myMap = new google.maps.Map(container, options);
+
+
+
+
+// function initMap() {
+//   console.log (this.cityArr)
+//   let container =  document.getElementById('mymap')
+//   let options = {
+//       mapTypeId: 'hybrid',
+//       center: {lat: 49.9967099, lng: 36.218107},
+//       zoom: 12
+//   }
+//   myMap = new google.maps.Map(container, options);
   
   
   
   
-  // function addMarker (properties) {
-  //   let marker = new google.maps.Marker ({
-  //     map: myMap,
-  //     position: properties.coordinates,
-  //     info: properties.info
-  //   })
-  //   let InfoWindow = new google.maps.InfoWindow ({
-  //     content: properties.info ,
-  //     maxWidth: 200
-  //   })
+//   function addMarker (properties) {
+//     let marker = new google.maps.Marker ({
+//       map: myMap,
+//       position: properties.coordinates,
+//       info: properties.info
+//     })
+//     let InfoWindow = new google.maps.InfoWindow ({
+//       content: properties.info ,
+//       maxWidth: 200
+//     })
 
-  //   marker.addListener ('click', function (event){
-  //       InfoWindow.open(myMap, marker)
-  //   })
-  // }
+//     marker.addListener ('click', function (event){
+//         InfoWindow.open(myMap, marker)
+//     })
+//   }
 
-  // markers.forEach (function (mark) {
-  //   addMarker (mark)
-  // })  
-
-
-  // var flightPlanCoordinates = markers.map (function (mark) {
-  //    return mark.coordinates
-  // })
+//   markers.forEach (function (mark) {
+//     addMarker (mark)
+//   })  
 
 
-  // var flightPlanCoordinates = function (){
+//   var flightPlanCoordinates = markers.map (function (mark) {
+//      return mark.coordinates
+//   })
+
+
+//   // var flightPlanCoordinates = function (){
     
-  // }
+//   // }
 
-  // var flightPath = new google.maps.Polyline({
-  //           path: flightPlanCoordinates,
-  //           geodesic: true,
-  //           strokeColor: '#FF0000',
-  //           strokeOpacity: 1.0,
-  //           strokeWeight: 2
-  //         });
+//   // var flightPath = new google.maps.Polyline({
+//   //           path: flightPlanCoordinates,
+//   //           geodesic: true,
+//   //           strokeColor: '#FF0000',
+//   //           strokeOpacity: 1.0,
+//   //           strokeWeight: 2
+//   //         });
 
-  // flightPath.setMap(myMap);
-
-
+//   // flightPath.setMap(myMap);
 
 
-}
+
+
+// }
+
+
 
 
 

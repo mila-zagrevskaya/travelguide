@@ -1,9 +1,23 @@
 // const port = '3000'
-// let myMap;
+let myMap;
+let markers = []
+let flightPlanCoordinates = []
 
 let cityContainer = document.querySelector (".city-container")
 let cityArr = []
 
+
+function initMap() {
+  	let container =  document.getElementById('mymap')
+  	let options = {
+      	mapTypeId: 'hybrid',
+      	center: {lat: 49.9967099, lng: 36.218107},
+      	zoom: 12
+  	}
+  	myMap = new google.maps.Map(container, options);
+  	let marker
+  	let InfoWindow
+} 
 
 function clearBlock (container) {
  	container.style.display = "none"
@@ -17,6 +31,9 @@ function getReadyContainer  (event){
 
 function searchCity (event) {
 	cityContainer.remove()
+	document.querySelector (".map-container").style.display = "block"
+	document.getElementById ("mymap").style.display = "block"
+	document.getElementById ("mymap").style.minWidth = "500px"
 	cityContainer = document.createElement("div")
 	cityContainer.className = "city-container"
 	document.querySelector (".description").appendChild ( cityContainer )
@@ -30,12 +47,43 @@ function searchCity (event) {
 					for (let item in dataObj) { //объект с массивами обьектов
 						val == item ? cityArr.push(dataObj[item])  : null
 					}
-				}
-			).then(function(response){
-				cityArr[0].forEach(
-					function(item, index){
-						let element = document.querySelector (".city-container").appendChild(
-							document.createElement("choise-way"))
+					console.log (dataObj)
+					initMap()
+					function addMarker (properties) {
+				    	marker = new google.maps.Marker ({
+					    	map: myMap,
+					    	position: properties.coordinates,
+					    	info: properties.info
+				    	})
+					   	InfoWindow = new google.maps.InfoWindow ({
+					    	content: properties.info ,
+					    	maxWidth: 200
+				    	})
+					    marker.addListener ('click', function (event){
+					    	InfoWindow.open(myMap, marker)
+					    })
+				  	}
+				  	// var flightPlanCoordinates = function (){
+    
+  					// }
+
+				  	var flightPath = new google.maps.Polyline({
+				        path: flightPlanCoordinates,
+				        geodesic: true,
+				        strokeColor: '#FF0000',
+				        strokeOpacity: 1.0,
+				        strokeWeight: 2
+				    });
+
+				  flightPath.setMap(myMap);
+
+	
+
+					let element
+					cityArr[0].forEach(
+						function(item, index){
+							element = document.querySelector (".city-container").appendChild(
+								document.createElement("choise-way"))
 							element.setAttribute ("coordinates", JSON.stringify(item.coordinates))
 							element.setAttribute ("name", item.name);
 							element.setAttribute ("adress", item.adress)
@@ -43,14 +91,59 @@ function searchCity (event) {
 							element.setAttribute ("image", item.image)
 							element.shadow.querySelector ("input").setAttribute ("id", `input${index}`);
 							element.shadow.querySelector ("label").setAttribute ("for", `input${index}`);
+							element.shadow.querySelector ("input")
+								.addEventListener ( 'change', function ( event ) {
+
+							        addMarker (item)
+							        flightPlanCoordinates.push (item.coordinates)
+									// console.log (item)
+							  //       console.log (flightPlanCoordinates)
+							    })
+						})
+					
+
 					})
-			})
-		)
+				
+			)
+
+
+			// .then(function(response){
+				// let element
+				// cityArr[0].forEach(
+				// 	function(item, index){
+				// 		element = document.querySelector (".city-container").appendChild(
+				// 			document.createElement("choise-way"))
+				// 		element.setAttribute ("coordinates", JSON.stringify(item.coordinates))
+				// 		element.setAttribute ("name", item.name);
+				// 		element.setAttribute ("adress", item.adress)
+				// 		element.setAttribute ("info", item.info)
+				// 		element.setAttribute ("image", item.image)
+				// 		element.shadow.querySelector ("input").setAttribute ("id", `input${index}`);
+				// 		element.shadow.querySelector ("label").setAttribute ("for", `input${index}`);
+				// 		element.shadow.querySelector ("input")
+				// 			.addEventListener ( 'change', function ( event ) {
+				// 		        markers = item
+				// 		        flightPlanCoordinates.push (markers.coordinates)
+				// 				// console.log (markers)
+				// 		        console.log (flightPlanCoordinates)
+				// 		    })
+				// 	})
+			
+			// }
+			// )
+		// )
 	getReadyContainer ()
 	
 }
 
 
+
+
+
+
+
+
+// ____________
 const template = document.querySelector (".city-container").appendChild (
     document.createElement ( "template" )
 )
@@ -202,7 +295,6 @@ template.innerHTML = `
 		</div>
 	`
 
-
 class ChoiseWay extends HTMLElement {
     constructor() {
     	super()
@@ -227,75 +319,59 @@ class ChoiseWay extends HTMLElement {
 
 customElements.define( 'choise-way', ChoiseWay )
 
+// __________________
 
 
 
-/*
 
 // инициируем карту
 
 
-function initMap() {
-  let container =  document.getElementById('mymap')
-  let options = {
-      mapTypeId: 'hybrid',
-      center: {lat: 49.9967099, lng: 36.218107},
-      zoom: 12
-  }
-  myMap = new google.maps.Map(container, options);
+// function initMap() {
+//   	let container =  document.getElementById('mymap')
+//   	let options = {
+//       	mapTypeId: 'hybrid',
+//       	center: {lat: 49.9967099, lng: 36.218107},
+//       	zoom: 12
+//   	}
+//   	myMap = new google.maps.Map(container, options);
   
-  
-  
-  
-function addMarker (properties) {
-  let marker = new google.maps.Marker ({
-    map: myMap,
-    position: properties.coordinates,
-    info: properties.info
-  })
-  let InfoWindow = new google.maps.InfoWindow ({
-    content: properties.info
-  })
-}
+  	// function addMarker (properties) {
+   //  	let marker = new google.maps.Marker ({
+	  //   	map: myMap,
+	  //   	position: properties.coordinates,
+	  //   	info: properties.info
+   //  	})
+	  //   let InfoWindow = new google.maps.InfoWindow ({
+	  //   	content: properties.info ,
+	  //   	maxWidth: 200
+   //  	})
 
-  // marker.addListener ('click', function (event){
-  //     InfoWindow.open(myMap, marker)
-  // })
-
-
+	  //   marker.addListener ('click', function (event){
+	  //   	InfoWindow.open(myMap, marker)
+	  //   })
+  	// }	
+  	// 	addMarker (markers)
+		  
 
 
+  // var flightPlanCoordinates = []
 
 
-  // var flightPlanCoordinates = function (){
+//   // var flightPlanCoordinates = function (){
     
-  // }
+//   // }
 
-//   var flightPath = new google.maps.Polyline({
-//             path: flightPlanCoordinates,
-//             geodesic: true,
-//             strokeColor: '#FF0000',
-//             strokeOpacity: 1.0,
-//             strokeWeight: 2
-//           });
+//   // var flightPath = new google.maps.Polyline({
+//   //           path: flightPlanCoordinates,
+//   //           geodesic: true,
+//   //           strokeColor: '#FF0000',
+//   //           strokeOpacity: 1.0,
+//   //           strokeWeight: 2
+//   //         });
 
-//   flightPath.setMap(map);
+//   // flightPath.setMap(myMap);
 
-// flightPlanCoordinates.forEach(function (item){
-//   function addMarker (properties){
-//     let marker = new google.maps.Marker ({
-//       position:  item,
-//       map: myMap
-//     })
-
-//   }
-// })
+// }
 
 
-
-
-
-
-}
-
-*/
