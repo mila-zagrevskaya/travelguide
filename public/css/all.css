@@ -154,11 +154,11 @@ body {
 
 }
 .map-container {
-	/*display: none;*/
+	display: none;
 }
 #mymap {
-	/*display: none;*/
-	min-height: 500px;
+	display: none;
+
 }
 
 
@@ -166,13 +166,18 @@ body {
 
 .footer {
 	color:  var(--main-color);
-	background-color: #bfbbb5;;
+	background-color: #bfbbb5;
+	
+}
+.footer-wrap {
+	max-width: 1180px;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 .logo img {
-	width: 100px;
+	width: 120px;
 	margin: 20px;
 }
 footer .menu {
