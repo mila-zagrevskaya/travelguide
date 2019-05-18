@@ -15,22 +15,12 @@ document.querySelector('.up').addEventListener('click', function(event) {
     pageUp();
 })
 
-
-
-// function testUserText (userText) {
-// 	return userText.split ("<").join ("&lt")
-// 	console.log (userText)
-// }
-
-
 // вывести на страницу приветствие и убрать checkbox
 logo.addEventListener ('click', function (event){
 	recital.style.display = "block"
 	slider.style.display = "block"
 	cityContainer.textContent = ""
+	document.querySelector (".map-container").style.display = "none"
 })
-
-
-
 
 

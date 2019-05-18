@@ -1,17 +1,14 @@
 // const port = '3000'
 let myMap;
-let markers = []
-let flightPlanCoordinates = []
-
+let markerArray = []
 let cityContainer = document.querySelector (".city-container")
 let cityArr = []
-
 
 function initMap() {
   	let container =  document.getElementById('mymap')
   	let options = {
       	mapTypeId: 'roadmap',
-      	center: {lat: 49.2436179, lng: 30.2129481},
+      	center: {lat: 49.8610945, lng: 33.7901306},
       	zoom: 7
   	}
   	myMap = new google.maps.Map(container, options);
@@ -44,7 +41,6 @@ function searchCity (event) {
 					for (let item in dataObj) { //объект с массивами обьектов
 						val == item ? cityArr.push(dataObj[item])  : null
 					}
-					console.log (dataObj)
 					initMap()
 					document.querySelector (".map-container").style.display = "block"
 					document.getElementById ("mymap").style = `
@@ -52,20 +48,19 @@ function searchCity (event) {
 										min-height: 500px;
 									`
 					function addMarker (properties) {
-				    	marker = new google.maps.Marker ({
-					    	map: myMap,
-					    	position: properties.coordinates,
-					    	info: properties.info
-				    	})
-					   	InfoWindow = new google.maps.InfoWindow ({
-					    	content: properties.info ,
-					    	maxWidth: 200
-				    	})
-					    marker.addListener ('click', function (event){
-					    	InfoWindow.open(myMap, marker)
-					    })
-				  	}
-				
+						marker = new google.maps.Marker ({
+							map: myMap,
+							position: properties.coordinates,
+							info: properties.info
+						})
+						InfoWindow = new google.maps.InfoWindow ({
+							content: properties.info ,
+							maxWidth: 200
+						})
+						marker.addListener ('click', function (event){
+							InfoWindow.open(myMap, marker)
+						})
+					}
 				let element
 				cityArr[0].forEach(
 					function(item, index){
@@ -78,27 +73,16 @@ function searchCity (event) {
 						element.setAttribute ("image", item.image)
 						element.shadow.querySelector ("input").setAttribute ("id", `input${index}`);
 						element.shadow.querySelector ("label").setAttribute ("for", `input${index}`);
+						// обработчик события change на checkbox
 						element.shadow.querySelector ("input")
 							.addEventListener ( 'change', function ( event ) {
 								addMarker (item)
-							 //    flightPlanCoordinates.push (item.coordinates)
-							 //    var flightPath = new google.maps.Polyline({
-								//     path: flightPlanCoordinates,
-								//     geodesic: true,
-								//     strokeColor: '#FF0000',
-								//     strokeOpacity: 1.0,
-								//     strokeWeight: 2
-								// });
-
-								// flightPath.setMap(myMap);
 							})
 				})
 			})
 		)
 	getReadyContainer ()
 }
-
-
 
 
 // ____________
@@ -278,4 +262,3 @@ class ChoiseWay extends HTMLElement {
 customElements.define( 'choise-way', ChoiseWay )
 
 // __________________
-

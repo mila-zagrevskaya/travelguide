@@ -65,7 +65,6 @@ body {
 .nav-items:hover {
 	color:  var(--decoration-color);
 }
-
 .text-holder {
 	text-align: center;
 	margin: 20px auto;
@@ -151,23 +150,16 @@ body {
 }
 .slider {
 	position: relative;
-
 }
 .map-container {
 	display: none;
 }
 #mymap {
 	display: none;
-
 }
-
-
-
-
 .footer {
 	color:  var(--main-color);
 	background-color: #bfbbb5;
-	
 }
 .footer-wrap {
 	max-width: 1180px;
@@ -203,7 +195,7 @@ footer .menu {
 		padding: 0px 0px;
 	}
 	.nav-items a {
-		margin: 4px;
+		margin: 3px;
 	}
 	.text-holder {
 		width: calc(100% - 5px);
