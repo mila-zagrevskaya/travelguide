@@ -6,9 +6,11 @@
 :root {
   --decoration-color: #492f30;
 }
-
 :root {
-	--content-color: #757575;
+	--content-color: #484848;
+}
+:root {
+	--detail-color: #c8c4be;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
 }
 .wrapper {
 	margin: 0 auto;
-	background-color: #fff;
+	background-color: var(--main-color);
 	background-image: url(../images/back_1.jpg);
 	background-size: cover;
 }
@@ -87,7 +89,7 @@ body {
 	line-height: 2em;
 	border: 1px solid  var(--decoration-color);
 	border-radius: 3px;
-	background-color: #c8c4be;
+	background-color: var(--detail-color);
 	padding: 5px 10px;
 }
 .contacts {
@@ -126,6 +128,7 @@ body {
 }
 .description {
 	margin: 0px auto 10px;
+	opacity: 0.6;
 	font-size: 1em;
 	font-weight: normal;
 }
@@ -159,22 +162,27 @@ body {
 }
 .footer {
 	color:  var(--main-color);
-	background-color: #bfbbb5;
+	background-color: #a7b3af;
 }
 .footer-wrap {
 	max-width: 1180px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .logo img {
 	width: 120px;
-	margin: 20px;
+	margin: 15px;
 }
-footer .menu {
-	flex-direction: column;
+.footer .menu {
+	flex-direction: row;
+	font-size: 1.2em;
 	margin-left: 15px;
+}
+.footer .menu  .nav-items {
+	margin: 20px;
+    display: block;
 }
 .arrow img {
 	display: none;
@@ -190,6 +198,11 @@ footer .menu {
 }
 
 /*_____________*/
+@media (max-width: 910px) {
+	.footer .menu  .nav-items {
+		margin: 20px 5px;
+	}
+}
 @media (max-width: 768px) {
 	.header {
 		padding: 0px 0px;
@@ -210,5 +223,14 @@ footer .menu {
 	.btn {
 		width: calc(65% - 10px);
 	}
-
+	.footer .menu {
+		flex-direction: column;
+		margin: 5px;
+	}
+	.footer .menu  .nav-items {
+		margin: 0 15px;
+	}
+	.logo img {
+		margin: 30px 15px 15px;
+	}
 }
