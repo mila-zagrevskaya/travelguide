@@ -30,6 +30,8 @@ function searchCity (event) {
 	cityContainer.remove()
 	cityContainer = document.createElement("div")
 	cityContainer.className = "city-container"
+	// cityContainer.style.opacity = "1"
+	document.querySelector (".description").style.opacity = "1"
 	document.querySelector (".description").appendChild ( cityContainer )
 	cityArr = []
 
