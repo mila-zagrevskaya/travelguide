@@ -34,7 +34,7 @@ function searchCity (event) {
 	cityArr = []
 
 	var val = this.event.target.value
-	fetch ('../../db/db.json/cities') //'http://localhost:3000/cities'
+	fetch ('../db/db.json/cities') //'http://localhost:3000/cities'
 		.then (response => response.json ()
 			.then (
 				dataObj => {
