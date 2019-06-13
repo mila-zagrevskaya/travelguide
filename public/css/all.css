@@ -2,16 +2,11 @@
 
 :root {
   --main-color: #fff;
-}
-:root {
-  --decoration-color: #492f30;
-}
-:root {
+ --decoration-color: #492f30;
 	--content-color: #484848;
-}
-:root {
 	--detail-color: #c8c4be;
 }
+
 
 body {
 	font-family: 'Lato', sans-serif;

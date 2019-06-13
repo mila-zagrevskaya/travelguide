@@ -1,9 +1,9 @@
-// const port = '3000'
 let myMap;
 let markerArray = []
 let cityContainer = document.querySelector (".city-container")
 let cityArr = []
-
+let marker
+ let InfoWindow
 function initMap() {
   	let container =  document.getElementById('mymap')
   	let options = {
@@ -12,8 +12,6 @@ function initMap() {
       	zoom: 7
   	}
   	myMap = new google.maps.Map(container, options);
-  	let marker
-  	let InfoWindow
 } 
 
 function clearBlock (container) {
@@ -36,7 +34,7 @@ function searchCity (event) {
 	cityArr = []
 
 	var val = this.event.target.value
-	fetch ('http://localhost:3000/cities') //http://localhost:${port}/cities
+	fetch ('../../db/db.json/cities') //'http://localhost:3000/cities'
 		.then (response => response.json ()
 			.then (
 				dataObj => {
@@ -75,7 +73,6 @@ function searchCity (event) {
 						element.setAttribute ("image", item.image)
 						element.shadow.querySelector ("input").setAttribute ("id", `input${index}`);
 						element.shadow.querySelector ("label").setAttribute ("for", `input${index}`);
-						// обработчик события change на checkbox
 						element.shadow.querySelector ("input")
 							.addEventListener ( 'change', function ( event ) {
 								addMarker (item)

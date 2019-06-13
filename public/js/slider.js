@@ -1,7 +1,7 @@
 const elem = document.querySelector (".slider").appendChild (
   document.createElement ( 'picture-slider' )
 )
-  elem.setAttribute( "src", "http://localhost:3000/pictures" )
+  elem.setAttribute( "src", '../../db/db.json/pictures' ) //"http://localhost:3000/pictures"
 
 class PictureSlider extends HTMLElement {
     constructor () {
