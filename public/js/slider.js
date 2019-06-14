@@ -1,7 +1,7 @@
 const elem = document.querySelector (".slider").appendChild (
   document.createElement ( 'picture-slider' )
 )
-  elem.setAttribute( "src", '../db/db.json/pictures' ) //"http://localhost:3000/pictures"
+  elem.setAttribute( "src", '../../db/db.json/pictures' ) //"http://localhost:3000/pictures"
 
 class PictureSlider extends HTMLElement {
     constructor () {
@@ -104,7 +104,7 @@ class PictureSlider extends HTMLElement {
         let to = direction === 'left' ? 100 : -100
         let nextSlide = this.currentSlide === 0 ? 1 : 0
         let nextIndex = this.getNextIndex ( direction )
-        this.slides [ nextSlide ].setPicture ( this.pictures [ nextIndex ] )
+        this.slides [ nextSlide ].setPicture ( this.pictures [ negixtIndex ] )
         this.slides [ nextSlide ].init ( -to )
         this.slides [ this.currentSlide ].mcFromTo ( 10, to, 0 )
         this.slides [ nextSlide ].mcFromTo ( -to, 10, 1 )
